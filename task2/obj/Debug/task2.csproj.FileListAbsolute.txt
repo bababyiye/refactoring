@@ -1,0 +1,10 @@
+C:\Users\Макс\source\repos\lab3.NET\task2\obj\Debug\task2.csproj.AssemblyReference.cache
+C:\Users\Макс\source\repos\lab3.NET\task2\obj\Debug\task2.Properties.Resources.resources
+C:\Users\Макс\source\repos\lab3.NET\task2\obj\Debug\task2.csproj.GenerateResource.cache
+C:\Users\Макс\source\repos\lab3.NET\task2\obj\Debug\task2.csproj.CoreCompileInputs.cache
+C:\Users\Макс\source\repos\lab3.NET\task2\bin\Debug\task2.exe.config
+C:\Users\Макс\source\repos\lab3.NET\task2\bin\Debug\task2.exe
+C:\Users\Макс\source\repos\lab3.NET\task2\bin\Debug\task2.pdb
+C:\Users\Макс\source\repos\lab3.NET\task2\obj\Debug\task2.exe
+C:\Users\Макс\source\repos\lab3.NET\task2\obj\Debug\task2.pdb
+C:\Users\Макс\source\repos\lab3.NET\task2\obj\Debug\ProcessManager.MainForm.resources

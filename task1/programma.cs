@@ -5,7 +5,6 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace task1
 {
@@ -36,19 +35,15 @@ namespace task1
 
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
-            if (ValidateInputs())
-            {
-                worker.RunWorkerAsync(new WorkerArgs
-                {
-                    FilePath = txtFilePath.Text,
-                    Key = txtKey.Text,
-                    IsEncryption = true
-                });
-                StartOperation("Encrypting...");
-            }
+            StartWorker(true);
         }
 
         private void btnDecrypt_Click(object sender, EventArgs e)
+        {
+            StartWorker(false);
+        }
+
+        private void StartWorker(bool isEncryption)
         {
             if (ValidateInputs())
             {
@@ -56,59 +51,25 @@ namespace task1
                 {
                     FilePath = txtFilePath.Text,
                     Key = txtKey.Text,
-                    IsEncryption = false
+                    IsEncryption = isEncryption
                 });
-                StartOperation("Decrypting...");
+                UpdateProgressLabel(isEncryption ? "Encrypting..." : "Decrypting...");
             }
         }
 
         private void Worker_DoWork(object sender, DoWorkEventArgs e)
         {
             var args = (WorkerArgs)e.Argument;
-            string outputFilePath = args.FilePath + (args.IsEncryption ? ".enc" : ".dec");
-
-            using (FileStream inputFileStream = new FileStream(args.FilePath, FileMode.Open, FileAccess.Read))
-            using (FileStream outputFileStream = new FileStream(outputFilePath, FileMode.Create, FileAccess.Write))
+            var encryptor = new FileEncryptor();
+            try
             {
-                var key = Encoding.UTF8.GetBytes(args.Key.PadRight(32).Substring(0, 32));
-                var iv = Encoding.UTF8.GetBytes(args.Key.PadRight(16).Substring(0, 16));
-
-                using (Aes aes = Aes.Create())
-                {
-                    aes.Key = key;
-                    aes.IV = iv;
-
-                    CryptoStream cryptoStream;
-                    if (args.IsEncryption)
-                    {
-                        cryptoStream = new CryptoStream(outputFileStream, aes.CreateEncryptor(), CryptoStreamMode.Write);
-                    }
-                    else
-                    {
-                        cryptoStream = new CryptoStream(outputFileStream, aes.CreateDecryptor(), CryptoStreamMode.Write);
-                    }
-
-                    byte[] buffer = new byte[8192];
-                    int bytesRead;
-                    long totalBytes = inputFileStream.Length;
-                    long processedBytes = 0;
-
-                    while ((bytesRead = inputFileStream.Read(buffer, 0, buffer.Length)) > 0)
-                    {
-                        cryptoStream.Write(buffer, 0, bytesRead);
-                        processedBytes += bytesRead;
-                        int progress = (int)((double)processedBytes / totalBytes * 100);
-                        worker.ReportProgress(progress);
-                    }
-                }
+                var result = encryptor.ProcessFile(args.FilePath, args.Key, args.IsEncryption, worker);
+                e.Result = result;
             }
-
-            e.Result = new WorkerResult
+            catch (Exception ex)
             {
-                FilePath = outputFilePath,
-                FileSize = new FileInfo(outputFilePath).Length,
-                ElapsedTime = stopwatch.Elapsed
-            };
+                e.Result = ex.Message;
+            }
         }
 
         private void Worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -119,11 +80,17 @@ namespace task1
         private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             stopwatch.Stop();
-            progress.Text = "Operation completed.";
-            var result = (WorkerResult)e.Result;
-            MessageBox.Show($"File: {Path.GetFileName(result.FilePath)}\n" +
-                            $"Size: {result.FileSize} bytes\n" +
-                            $"Time: {result.ElapsedTime}", "Operation Info");
+            UpdateProgressLabel("Operation completed.");
+            if (e.Result is WorkerResult result)
+            {
+                MessageBox.Show($"File: {Path.GetFileName(result.FilePath)}\n" +
+                                $"Size: {result.FileSize} bytes\n" +
+                                $"Time: {result.ElapsedTime}", "Operation Info");
+            }
+            else
+            {
+                MessageBox.Show($"Error: {e.Result}", "Operation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private bool ValidateInputs()
@@ -143,9 +110,9 @@ namespace task1
             return true;
         }
 
-        private void StartOperation(string status)
+        private void UpdateProgressLabel(string text)
         {
-            progress.Text = status;
+            progress.Text = text;
             progressBar.Value = 0;
             stopwatch.Restart();
         }

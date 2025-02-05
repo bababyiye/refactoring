@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{01FA7028-113D-4FAC-9840-BDE04D7C948F}|task1\\task1.csproj|solutionrelative:task1\\programma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{01FA7028-113D-4FAC-9840-BDE04D7C948F}|task1\\task1.csproj|c:\\users\\\u043C\u0430\u043A\u0441\\source\\repos\\.net_2.1\\lab3.net\\task1\\fileencryptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01FA7028-113D-4FAC-9840-BDE04D7C948F}|task1\\task1.csproj|solutionrelative:task1\\fileencryptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{01FA7028-113D-4FAC-9840-BDE04D7C948F}|task1\\task1.csproj|C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task1\\programma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{01FA7028-113D-4FAC-9840-BDE04D7C948F}|task1\\task1.csproj|solutionrelative:task1\\programma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75672C52-3767-4DA3-BB27-3D755AC9F3AC}|task2\\task2.csproj|C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{75672C52-3767-4DA3-BB27-3D755AC9F3AC}|task2\\task2.csproj|solutionrelative:task2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{75672C52-3767-4DA3-BB27-3D755AC9F3AC}|task2\\task2.csproj|C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75672C52-3767-4DA3-BB27-3D755AC9F3AC}|task2\\task2.csproj|solutionrelative:task2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75672C52-3767-4DA3-BB27-3D755AC9F3AC}|task2\\task2.csproj|C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{75672C52-3767-4DA3-BB27-3D755AC9F3AC}|task2\\task2.csproj|solutionrelative:task2\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +30,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileEncryptor.cs",
+              "DocumentMoniker": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task1\\FileEncryptor.cs",
+              "RelativeDocumentMoniker": "task1\\FileEncryptor.cs",
+              "ToolTip": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task1\\FileEncryptor.cs",
+              "RelativeToolTip": "task1\\FileEncryptor.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwC4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T13:06:38.895Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -36,20 +53,22 @@
               "RelativeDocumentMoniker": "task2\\MainForm.cs",
               "ToolTip": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task2\\MainForm.cs",
               "RelativeToolTip": "task2\\MainForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAADwvyAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T17:39:44.426Z"
+              "WhenOpened": "2024-12-10T17:39:44.426Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task2\\MainForm.cs",
               "RelativeDocumentMoniker": "task2\\MainForm.cs",
-              "ToolTip": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\lab3.NET\\task2\\MainForm.cs [Design]",
-              "RelativeToolTip": "..\\..\\lab3.NET\\task2\\MainForm.cs [Design]",
+              "ToolTip": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task2\\MainForm.cs [Design]",
+              "RelativeToolTip": "task2\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T17:36:38.247Z"
+              "WhenOpened": "2024-12-10T17:36:38.247Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -59,21 +78,22 @@
               "RelativeDocumentMoniker": "task1\\programma.cs",
               "ToolTip": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task1\\programma.cs",
               "RelativeToolTip": "task1\\programma.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T16:18:44.242Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "programma.cs [Design]",
               "DocumentMoniker": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task1\\programma.cs",
               "RelativeDocumentMoniker": "task1\\programma.cs",
-              "ToolTip": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\lab3.NET\\task1\\programma.cs [Design]",
-              "RelativeToolTip": "..\\..\\lab3.NET\\task1\\programma.cs [Design]",
+              "ToolTip": "C:\\Users\\\u041C\u0430\u043A\u0441\\source\\repos\\.NET_2.1\\lab3.NET\\task1\\programma.cs [Design]",
+              "RelativeToolTip": "task1\\programma.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T16:05:05.409Z"
+              "WhenOpened": "2024-12-10T16:05:05.409Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
